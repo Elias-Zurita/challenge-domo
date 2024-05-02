@@ -1,0 +1,64 @@
+a {
+    text-decoration: none;
+} 
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(39,51,69,255);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* background-image: url("https://domofrontendchallenge.netlify.app/img/asset-background.jpg");
+    background-position: right top; 
+    background-repeat: no-repeat; 
+    background-size: 50%;
+    border: gold solid 3px!important; */
+    position: relative;
+    padding-top: 150px;
+}
+.bannerBackground{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 800px;
+}
+.navbar{
+    background-color: transparent!important;
+    color: #7d848e;
+    border: yellow solid 2px;
+}
+
+.cajaHeaderDesktop{
+    border: violet solid 2px;
+    display: flex;
+    justify-content:space-between;
+    width: 80%;
+    padding: 20px 0;
+    margin: 30px auto 0 auto;
+    font-size: large;
+}
+.navbar-toggler{
+    display:none;
+}
+.cajaIzquierdaHeaderDesktop{
+    border: red solid 2px;
+    color: white;
+    font-weight: bold;
+}
+.cajaDerechaHeaderDesktop{
+    display:flex;
+    border: blue solid 2px;
+}
+.cajaDerechaHeaderDesktop div:hover{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cajaDerechaHeaderDesktop div{
+    margin: 0 15px;
+}

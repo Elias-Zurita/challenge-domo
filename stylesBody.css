@@ -1,0 +1,434 @@
+body{
+    background-image:url(/img/asset-background.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-color: rgba(39,51,69,255)!important;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    text-decoration:none!important;
+}
+h1{
+    color: white !important;
+    font-weight:bold!important;
+    font-size: 50px!important;
+}
+h2{
+    color: white !important;
+    font-weight:bold!important;
+    
+}
+h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold !important;
+    font-style: normal;
+    color: #818792!important;
+    font-size: 20px!important;
+}
+/*---------- HEADER ----------*/
+.navbar{
+    background-color: transparent!important;
+    color: #7d848e;
+    border: yellow solid 2px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.cajaHeaderDesktop{
+    border: violet solid 2px;
+    display: flex;
+    justify-content:space-between;
+    width: 80%;
+    padding: 20px 0;
+    margin: 30px auto 0 auto;
+    font-size: large;
+}
+.navbar-toggler{
+    display:none;
+}
+.cajaIzquierdaHeaderDesktop{
+    border: red solid 2px;
+    color: white;
+    font-weight: bold;
+}
+.cajaDerechaHeaderDesktop{
+    display:flex;
+    border: blue solid 2px;
+}
+.cajaDerechaHeaderDesktop div:hover{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cajaDerechaHeaderDesktop div{
+    margin: 0 15px;
+}
+
+/*---------- BODY ----------*/
+.cajaPadreBanner{
+    border: red solid 3px;
+    width: 680px;
+    margin-top: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.botonesBanner{
+    border: blue solid 2px;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #818792;
+}
+.boton1Banner{
+    border: #5c6572 solid 2px;
+    background-color: rgba(39,51,69,255);
+    border-radius: 4px;
+    padding: 7px 25px;
+    font-weight: bold;
+    color: #818792;
+    margin-right: 25px;
+}
+.boton2Banner{
+    border: none;
+    background-color: #3871ff;
+    border-radius: 4px;
+    padding: 7px 25px;
+    font-weight: bold;
+    color: white;
+    margin-right: 25px;
+}
+
+/*---------- SERVICIOS ----------*/
+.padreServicios{
+    border: white solid 2px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 400px auto 50px auto;
+    text-align: center;
+    width: 100%;
+    height: 580px; /* altura de seccion gris para poner a mitad de tarjeta */
+    position: relative;
+}
+.tituloServicios h3{
+    line-height: 1.5;
+    width: 750px;
+    margin: 0 auto;
+    border: violet solid 2px;
+}
+.cajasServicios{
+    display: flex;
+    border: red solid 3px;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 50%; /* Se alinea con el 50% del ancho del contenedor padre */
+    transform: translateX(-50%); /* Se mueve hacia la izquierda en un 50% de su propio ancho */
+    top: 25%
+}
+.servicio{
+    z-index: 1000;
+    background-color: white;
+    width: 470px;
+    padding: 45px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+.servicio i{
+    background-color:#3871ff;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: white;
+    padding: 20px;
+}
+.titulo{
+    font-size: 25px;
+    font-weight: 500;
+    color: black!important;
+}
+.servicio p{
+    color: #7f7f7f;
+    line-height: 2;
+    font-size:20px;
+}
+.servicio button{
+    border: #d3d3d3 solid 2px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 7px 40px;
+    color: #808080;
+    margin-right: 25px;
+    margin-top: 30px;
+    font-size:20px;
+}
+
+/*---------- TECNOLOGIAS ----------*/
+.seccionTecnologias{
+    background-color: #3871ff;
+    color: white !;
+    width: 100%;
+    bottom: 100;
+    top: 430px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 240px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.textosTecnologias{
+    border: violet solid 2px;
+    color: #9bb8ff;
+    font-size: 20px;
+    line-height:1.5;
+    width: 600px;
+}
+.iconosTecnologias{
+    border: brown solid 2px;
+    width: 450px;
+    color: white;
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.iconosTecnologias i{
+    margin: 0 30px 50px 30px;
+    border: black solid 3px;
+    width: 150px;
+    text-align: center;
+}
+
+/*---------- CLIENTES ----------*/
+.seccionClientes{
+    background-color: white;
+    border:orangered solid 4px;
+    padding-top: 150px;
+    text-align: center;
+    color: #909090;
+    font-weight: 500;
+    position: relative;
+    height: 680px;
+}
+.iconosClientes{
+    margin: 100px 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: salmon solid 3px;
+    display: flex;
+    align-items: center;
+}
+swiper-container {
+    width: 100%;
+    height: 100%;
+    border: violet solid 2px;
+    display: flex!important;
+    align-items: center!important;
+}
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: red solid 3px;
+    height: 100px;
+}
+swiper-slide img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    height: auto;
+    border: black solid 2px;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(50%);
+}
+.tarjetasClientes{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    border: violet solid 2px;
+    width: 1350px;
+    justify-content: space-around;
+    left: 50%; /* Se alinea con el 50% del ancho del contenedor padre */
+    transform: translateX(-50%); /* Se mueve hacia la izquierda en un 50% de su propio ancho */
+    top: 70%;
+}
+.cardClient{
+    background-color: #3871ff;
+    color: white;
+    width: 600px;
+    border-radius: 7px;
+    text-align: left;
+    padding: 40px 30px;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.cardClient button, .cardClient2 button{
+    border: #9bb8ff solid 2px;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 7px 40px;
+    color: white;
+    margin-right: 25px;
+    margin-top: 30px;
+    font-size:17px;
+}
+.cardClient2{
+    background-color: #3871ff;
+    color: white;
+    width: 600px;
+    border-radius: 7px;
+    text-align: left;
+    padding: 40px 30px 0px 30px;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+}
+.infoClient{
+    width:60%;
+}
+.phone{
+    height: 100%;
+    width: 40%;
+    border: yellow solid 2px;
+    display: flex;
+    align-items: end;
+}
+.phone img{
+    width: 100%;
+}
+
+/*--------- FOOTER ----------*/
+.padreColumnasFooter{
+    background: #283345;
+    padding-top: 12%;
+    padding-bottom: 5%;
+    display: flex;
+    color: #9399a2;
+    border: crimson solid 2px;
+    width: 80%;
+    margin: 0 auto;
+}
+.columnaFooterAncha{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 17px;
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+    border: turquoise solid 2px;
+    padding-right: 30%;
+}
+.columnaFooter{
+    width: 25%;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 17px;
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+    border: turquoise solid 2px;
+}
+.tituloFooter{
+    color: white;
+    font-weight: bold;
+}
+.columnaFooter a{
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+.columnaFooter a:hover{
+    color: white!important;
+    font-weight: bold !important;
+}
+.subTituloFooter{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #9b1c43;
+    font-size: 25px;
+}
+.cajaRedesFooter{
+    margin:10px 0;
+}
+.redesFooter{
+    margin-right: 2px;
+    background-color: transparent;
+    color: #9399a2;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redesFooter:hover{
+    background-color: white;
+}
+.redesFooter:hover i{
+    color: black;
+    font-weight: bold;
+}
+.cajaDesarrollador{
+    background: #292b33;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+.cajaDesarrollador span{
+    font-family: 'Tomorrow', sans-serif;
+    text-shadow: -1px 4px 3px rgba(155, 28, 67, 0.48);
+    font-weight:bold
+}
+.cajaDesarrollador a{
+  color: white;
+  font-weight: bold;
+}
+.cajaDesarrollador a:hover{
+    color: #9b1c43;
+  }
+.cajaDesarrollador strong:hover{
+    color: rgb(18, 224, 187);
+}
+@media (max-width:1200px){ 
+    .padreColumnasFooter{
+        padding: 3% 5% 2% 3%;
+        display: flex;
+    }
+    .columnaFooter{
+        width: 25%;
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+}
+@media (max-width:1200px){ 
+    .padreColumnasFooter{
+        flex-direction: column;
+    }
+    .columnaFooter{
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+@media (max-width:800px){ 
+  .padreColumnasFooter {
+    padding-left: 7%;
+  }
+}
