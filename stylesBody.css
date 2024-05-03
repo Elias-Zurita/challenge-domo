@@ -1,3 +1,8 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suma posteriormente. */
+}
 body{
     background-image:url(/img/asset-background.jpg);
     background-position: top right;
@@ -8,6 +13,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    border: greenyellow solid 5px;
 }
 a{
     text-decoration:none!important;
@@ -20,7 +26,6 @@ h1{
 h2{
     color: white !important;
     font-weight:bold!important;
-    
 }
 h3{
     font-family: "Montserrat", sans-serif;
@@ -44,7 +49,8 @@ h3{
     border: violet solid 2px;
     display: flex;
     justify-content:space-between;
-    width: 80%;
+    width: 1500px;
+    max-width: 1500px!important;
     padding: 20px 0;
     margin: 30px auto 0 auto;
     font-size: large;
@@ -106,6 +112,9 @@ h3{
 }
 
 /*---------- SERVICIOS ----------*/
+.cajasServiciosResponsive{
+    display: none;
+}
 .padreServicios{
     border: white solid 2px;
     padding-left: 10%;
@@ -185,12 +194,16 @@ h3{
     width: 100%;
     bottom: 100;
     top: 430px;
-    padding-left: 10%;
-    padding-right: 10%;
     padding-top: 240px;
     padding-bottom: 150px;
+}
+.cajasTecnologias{
     display: flex;
     justify-content: space-between;
+    max-width: 1500px;
+    border: brown solid 3px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 .textosTecnologias{
     border: violet solid 2px;
@@ -266,11 +279,12 @@ swiper-slide img {
     display: flex;
     flex-wrap: wrap;
     border: violet solid 2px;
-    width: 1350px;
+    max-width: 1500px;
     justify-content: space-around;
     left: 50%; /* Se alinea con el 50% del ancho del contenedor padre */
     transform: translateX(-50%); /* Se mueve hacia la izquierda en un 50% de su propio ancho */
     top: 70%;
+    display: none;
 }
 .cardClient{
     background-color: #3871ff;
@@ -408,7 +422,35 @@ swiper-slide img {
 .cajaDesarrollador strong:hover{
     color: rgb(18, 224, 187);
 }
+@media (max-width:2000px){
+    .cajasServicios{
+        width: 100%;
+    }
+    .servicio{
+        width: 400px;
+    }
+} 
+@media (max-width:1350px){
+    .cajasServicios{
+        display: none;
+    }
+    .cajasServiciosResponsive{
+        display: block
+    }
+    .servicio{
+        width: 390px;
+    }
+}    
 @media (max-width:1200px){ 
+    body{
+        background-image:none;
+    }
+    .cajaPadreBanner{
+        margin: 150px auto 0 auto;
+    }
+    .padreServicios {
+        margin: 250px auto 50px auto;
+    }
     .padreColumnasFooter{
         padding: 3% 5% 2% 3%;
         display: flex;
@@ -419,6 +461,7 @@ swiper-slide img {
     }
 }
 @media (max-width:1200px){ 
+
     .padreColumnasFooter{
         flex-direction: column;
     }
@@ -427,8 +470,42 @@ swiper-slide img {
         padding-left: 20px;
     }
 }
+@media (max-width:1000px){ 
+    .navbar-toggler{
+        display:block;
+    }
+    .cajaHeaderDesktop{
+        display:none;
+    }
+    .cajaPadreBanner{
+        width: 90%;
+    }
+    h1{
+        font-size: 30px!important;
+    }
+    h2{
+
+    }
+    h3{
+        font-size: 17px!important;
+    }
+}
 @media (max-width:800px){ 
   .padreColumnasFooter {
     padding-left: 7%;
   }
+}
+@media (max-width:600px){ 
+    .botonesBanner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .boton1Banner{
+        margin: 15px;
+        width: 200px;
+    }
+    .boton2Banner{
+        width: 200px;
+        margin-right: 0;
+    }
 }
