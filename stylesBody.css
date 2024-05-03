@@ -435,10 +435,12 @@ swiper-slide img {
         display: none;
     }
     .cajasServiciosResponsive{
-        display: block
+        display: block;
+        height: 800px;
     }
-    .servicio{
+    .cajaServicio{
         width: 390px;
+        border: blue solid 2px;
     }
 }    
 @media (max-width:1200px){ 
