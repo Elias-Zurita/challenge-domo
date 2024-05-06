@@ -186,7 +186,19 @@ h3{
     margin-top: 30px;
     font-size:20px;
 }
-
+.serviciosSwiper{
+    border: black solid 3px;
+    height: 580px;
+    margin-top: 60px;
+}
+.slideServicios{
+    border: blueviolet solid 3px;
+    height: 580px;
+    background: transparent!important;
+}
+.servicio{
+    border: brown solid 3px;
+}
 /*---------- TECNOLOGIAS ----------*/
 .seccionTecnologias{
     background-color: #3871ff;
@@ -461,9 +473,6 @@ swiper-slide img {
         width: 25%;
         color: rgba(255, 255, 255, 0.6) !important;
     }
-}
-@media (max-width:1200px){ 
-
     .padreColumnasFooter{
         flex-direction: column;
     }
@@ -485,11 +494,11 @@ swiper-slide img {
     h1{
         font-size: 30px!important;
     }
-    h2{
-
-    }
     h3{
         font-size: 17px!important;
+    }
+    .tituloServicios h3{
+        width: 90%;
     }
 }
 @media (max-width:800px){ 
