@@ -1,3 +1,5 @@
+// Desplazamiento header con scroll
+
 window.addEventListener('scroll', function() {
     var headerDesktop = document.querySelector('.cajaHeaderDesktop');
     if (window.scrollY > 100) {

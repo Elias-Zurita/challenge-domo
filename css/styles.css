@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box; /* el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suma posteriormente. */
 }
+body::-webkit-scrollbar{
+    width: 9px;
+    background: white;
+}
+body::-webkit-scrollbar-thumb{
+    background:#2965f1;
+    border-radius: 5px;
+}
 body{
     background-image:url(/img/asset-background.jpg);
     background-position: top right;
@@ -13,7 +21,6 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    border: greenyellow solid 5px;
 }
 a{
     text-decoration:none!important;
@@ -58,14 +65,12 @@ h3{
 .navbar{
     background-color: transparent!important;
     color: #7d848e;
-    border: yellow solid 2px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 .cajaHeaderDesktop{
-    border: violet solid 2px;
     display: flex;
     justify-content:space-between;
     width: 1500px;
@@ -76,22 +81,21 @@ h3{
     transition: .3s ease-in-out;
 }
 .headerScrolled {
-    padding: 0;
+    padding: 0 10px;
     background-color: rgba(39,51,69,255);
     margin-top: 0;
+    border-radius: 20px;
 }
 .navbar-toggler{
     display:none;
 }
 .cajaIzquierdaHeaderDesktop{
-    border: red solid 2px;
     color: white;
     font-weight: bold;
     z-index: 1000;
 }
 .cajaDerechaHeaderDesktop{
     display:flex;
-    border: blue solid 2px;
     z-index: 1000;
 }
 .cajaDerechaHeaderDesktop div:hover{
@@ -105,14 +109,12 @@ h3{
 
 /*---------- BODY ----------*/
 .cajaPadreBanner{
-    border: red solid 3px;
     width: 680px;
     margin-top: 200px;
     margin-left: 10%;
     margin-right: 10%;
 }
 .botonesBanner{
-    border: blue solid 2px;
     display: flex;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -150,7 +152,6 @@ h3{
     display: none;
 }
 .padreServicios{
-    border: white solid 2px;
     padding-left: 10%;
     padding-right: 10%;
     margin: 400px auto 50px auto;
@@ -163,11 +164,9 @@ h3{
     line-height: 1.5;
     width: 750px;
     margin: 0 auto;
-    border: violet solid 2px;
 }
 .cajasServicios{
     display: flex;
-    border: red solid 3px;
     width: 80%;
     flex-wrap: wrap;
     justify-content: center;
@@ -234,23 +233,19 @@ h3{
     color: white;
 }
 .serviciosSwiper{
-    border: black solid 3px;
     height: 595px;
     margin-top: 60px;
 }
 .slideServicios{
-    border: blueviolet solid 3px;
     height: 580px;
     background: transparent!important;
 }
 .servicio{
     height: 580px;
-    border: brown solid 3px;
 }
 swiper-container {
     width: 100%;
     height: 100%;
-    border: violet solid 2px;
     display: flex!important;
     align-items: center!important;
 }
@@ -261,7 +256,6 @@ swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: red solid 3px;
     height: 100px;
 }
 /*---------- TECNOLOGIAS ----------*/
@@ -278,19 +272,16 @@ swiper-slide {
     display: flex;
     justify-content: space-between;
     max-width: 1500px;
-    border: brown solid 3px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 .textosTecnologias{
-    border: violet solid 2px;
     color: #9bb8ff;
     font-size: 20px;
     line-height:1.5;
     width: 600px;
 }
 .iconosTecnologias{
-    border: brown solid 2px;
     width: 450px;
     color: white;
     font-size: 80px;
@@ -301,7 +292,6 @@ swiper-slide {
 }
 .iconosTecnologias i{
     margin: 0 30px 50px 30px;
-    border: black solid 3px;
     width: 150px;
     text-align: center;
     transition: .3s ease-in-out;
@@ -334,7 +324,6 @@ swiper-slide {
 /*---------- CLIENTES ----------*/
 .seccionClientes{
     background-color: white;
-    border:orangered solid 4px;
     padding-top: 150px;
     text-align: center;
     color: #909090;
@@ -344,7 +333,6 @@ swiper-slide {
 }
 .iconosClientes{
     margin: 50px auto 80px auto;
-    border: salmon solid 3px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -356,19 +344,18 @@ swiper-slide {
     width: 200px;
     height: 200px;
     height: auto;
-    border: black solid 2px;
     object-fit: cover;
     filter: grayscale(100%) brightness(100%);
     margin: 15px;
+    transition: .3s ease-in-out;
 }
-.swiperClientes{
-    object-fit: cover;
+.iconosClientes img:hover {
+    filter: grayscale(0%)
 }
 .tarjetasClientes{
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    border: violet solid 2px;
     justify-content: center;
     left: 50%; /* Se alinea con el 50% del ancho del contenedor padre */
     transform: translateX(-50%); /* Se mueve hacia la izquierda en un 50% de su propio ancho */
@@ -419,7 +406,6 @@ swiper-slide {
 .phone{
     height: 100%;
     width: 40%;
-    border: yellow solid 2px;
     display: flex;
     align-items: end;
 }
@@ -436,7 +422,6 @@ swiper-slide {
     padding-bottom: 5%;
     display: flex;
     color: #9399a2;
-    border: crimson solid 2px;
     width: 80%;
     margin: 0 auto;
 }
@@ -446,7 +431,6 @@ swiper-slide {
     font-size: 17px;
     line-height: 1.5;
     font-family: "Montserrat", sans-serif;
-    border: turquoise solid 2px;
     padding-right: 30%;
 }
 .columnaFooter{
@@ -455,7 +439,6 @@ swiper-slide {
     font-size: 17px;
     line-height: 1.5;
     font-family: "Montserrat", sans-serif;
-    border: turquoise solid 2px;
 }
 .tituloFooter{
     color: white;
@@ -544,7 +527,6 @@ swiper-slide {
     }
     .cajaServicio{
         width: 390px;
-        border: blue solid 2px;
     }
     .tarjetasClientes{
         width: 100%;
@@ -599,7 +581,6 @@ swiper-slide {
     }
     .tarjetasClientesResponsive{
         display:block;
-        border: black solid 5px;
     }
     .tarjetasClientesResponsive swiper-slide{
         height: 100%;
@@ -621,9 +602,7 @@ swiper-slide {
     }
     .boton-custom{
         background-color: white !important;
-        border: none!important;
     }
-    
     .cajaHeaderDesktop{
         display:none;
     }
