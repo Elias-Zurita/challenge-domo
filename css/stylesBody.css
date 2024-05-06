@@ -17,6 +17,7 @@ body{
 }
 a{
     text-decoration:none!important;
+    color: inherit;
 }
 h1{
     color: white !important;
@@ -54,6 +55,12 @@ h3{
     padding: 20px 0;
     margin: 30px auto 0 auto;
     font-size: large;
+    transition: .3s ease-in-out;
+}
+.headerScrolled {
+    padding: 0;
+    background-color: rgba(39,51,69,255);
+    margin-top: 0;
 }
 .navbar-toggler{
     display:none;
@@ -62,10 +69,12 @@ h3{
     border: red solid 2px;
     color: white;
     font-weight: bold;
+    z-index: 1000;
 }
 .cajaDerechaHeaderDesktop{
     display:flex;
     border: blue solid 2px;
+    z-index: 1000;
 }
 .cajaDerechaHeaderDesktop div:hover{
     color: white;
@@ -151,7 +160,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: 15px;
 }
 .servicio i{
@@ -183,12 +192,11 @@ h3{
     padding: 7px 40px;
     color: #808080;
     margin-right: 25px;
-    margin-top: 30px;
     font-size:20px;
 }
 .serviciosSwiper{
     border: black solid 3px;
-    height: 580px;
+    height: 595px;
     margin-top: 60px;
 }
 .slideServicios{
@@ -197,7 +205,25 @@ h3{
     background: transparent!important;
 }
 .servicio{
+    height: 580px;
     border: brown solid 3px;
+}
+swiper-container {
+    width: 100%;
+    height: 100%;
+    border: violet solid 2px;
+    display: flex!important;
+    align-items: center!important;
+}
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: red solid 3px;
+    height: 100px;
 }
 /*---------- TECNOLOGIAS ----------*/
 .seccionTecnologias{
@@ -253,60 +279,47 @@ h3{
     height: 680px;
 }
 .iconosClientes{
-    margin: 100px 0;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin: 50px auto 80px auto;
     border: salmon solid 3px;
+    width: 90%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-swiper-container {
-    width: 100%;
-    height: 100%;
-    border: violet solid 2px;
-    display: flex!important;
-    align-items: center!important;
-}
-swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: red solid 3px;
-    height: 100px;
-}
-swiper-slide img {
+.iconosClientes img {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     height: auto;
     border: black solid 2px;
     object-fit: cover;
-    filter: grayscale(100%) brightness(50%);
+    filter: grayscale(100%) brightness(100%);
+    margin: 15px;
+}
+.swiperClientes{
+    object-fit: cover;
 }
 .tarjetasClientes{
     position: absolute;
     display: flex;
     flex-wrap: wrap;
     border: violet solid 2px;
-    max-width: 1500px;
-    justify-content: space-around;
+    justify-content: center;
     left: 50%; /* Se alinea con el 50% del ancho del contenedor padre */
     transform: translateX(-50%); /* Se mueve hacia la izquierda en un 50% de su propio ancho */
     top: 70%;
-    display: none;
+    width: 90%;
 }
 .cardClient{
     background-color: #3871ff;
     color: white;
-    width: 600px;
+    width: 560px;
     border-radius: 7px;
     text-align: left;
     padding: 40px 30px;
-    margin: 30px;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 15px;
     font-weight: lighter;
 }
 .cardClient button, .cardClient2 button{
@@ -322,12 +335,12 @@ swiper-slide img {
 .cardClient2{
     background-color: #3871ff;
     color: white;
-    width: 600px;
+    width: 560px;
     border-radius: 7px;
     text-align: left;
     padding: 40px 30px 0px 30px;
-    margin: 30px;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 15px;
     font-weight: lighter;
     display: flex;
 }
@@ -344,7 +357,9 @@ swiper-slide img {
 .phone img{
     width: 100%;
 }
-
+.tarjetasClientesResponsive{
+    display:none
+}
 /*--------- FOOTER ----------*/
 .padreColumnasFooter{
     background: #283345;
@@ -442,6 +457,11 @@ swiper-slide img {
         width: 400px;
     }
 } 
+@media (max-width:1600px){
+    .cajasTecnologias{
+        margin: 35px;
+    }
+}
 @media (max-width:1350px){
     .cajasServicios{
         display: none;
@@ -450,24 +470,49 @@ swiper-slide img {
         display: block;
         height: 800px;
     }
+    .tarjetasClientesResponsive{
+        height: 300px
+    }
     .cajaServicio{
         width: 390px;
         border: blue solid 2px;
     }
+    .tarjetasClientes{
+        width: 100%;
+    }
+    .seccionClientes swiper-slide{
+        background: transparent
+    }
 }    
-@media (max-width:1200px){ 
+@media (max-width:1225px){ 
     body{
         background-image:none;
     }
     .cajaPadreBanner{
         margin: 150px auto 0 auto;
     }
-    .padreServicios {
+    .padreServicios{
+        padding-left: 0;
+        padding-right: 0;
         margin: 250px auto 50px auto;
+    }
+    .cajasTecnologias{
+        justify-content: center;
+    }
+    .textosTecnologias {
+        width: 70%;
+        text-align: justify;
+    }
+    .textosTecnologias h2{
+        text-align: center;
+    }
+    .iconosTecnologias {
+        margin-top: 100px
     }
     .padreColumnasFooter{
         padding: 3% 5% 2% 3%;
         display: flex;
+        width: 90%;
     }
     .columnaFooter{
         width: 25%;
@@ -480,11 +525,31 @@ swiper-slide img {
         width: 100%;
         padding-left: 20px;
     }
+    .tarjetasClientes{
+        display: none;
+    }
+    .tarjetasClientesResponsive{
+        display:block;
+        border: black solid 5px;
+    }
+    .tarjetasClientesResponsive swiper-slide{
+        height: 100%;
+    }
+    footer{
+        padding-top: 210px;
+    }
 }
 @media (max-width:1000px){ 
     .navbar-toggler{
         display:block;
+        
     }
+    .boton-custom{
+        background-color: #7d848e !important;
+        border: none!important;
+        
+    }
+    
     .cajaHeaderDesktop{
         display:none;
     }
@@ -502,9 +567,12 @@ swiper-slide img {
     }
 }
 @media (max-width:800px){ 
-  .padreColumnasFooter {
-    padding-left: 7%;
-  }
+    .padreColumnasFooter {
+        padding-left: 7%;
+    }
+    footer{
+        padding-top: 280px;
+    }
 }
 @media (max-width:600px){ 
     .botonesBanner{
@@ -519,4 +587,41 @@ swiper-slide img {
         width: 200px;
         margin-right: 0;
     }
+    .cajasTecnologias {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .textosTecnologias{
+        width: 95%;
+        font-size:17px
+    }
+    .iconosTecnologias i{
+        width: 100px;;
+    }
+    .padreColumnasFooter{
+        width: 100%;
+    }
+    .seccionClientes{
+        height:970px
+    }
+    footer{
+        padding-top: 130px;
+    }
+    
 }
+@media (max-width:500px){ 
+    .servicio p, .servicio button{
+        font-size:15px
+    }
+    .servicio{
+        margin: 0;
+    }
+    .seccionClientes{
+        height: 1050px;
+    }
+    footer{
+        padding-top: 180px;
+    }
+}
+
+
