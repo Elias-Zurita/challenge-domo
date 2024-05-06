@@ -535,6 +535,12 @@ swiper-slide {
     .tarjetasClientesResponsive swiper-slide{
         height: 100%;
     }
+    .rtl-fix {
+        direction: ltr; /* Restaura la dirección de izquierda a derecha en card2 */
+    }
+    .cardClient, .cardClient2{
+        height:90%
+    }
     footer{
         padding-top: 210px;
     }
@@ -545,9 +551,8 @@ swiper-slide {
         
     }
     .boton-custom{
-        background-color: #7d848e !important;
+        background-color: white !important;
         border: none!important;
-        
     }
     
     .cajaHeaderDesktop{
@@ -574,6 +579,17 @@ swiper-slide {
         padding-top: 280px;
     }
 }
+@media (max-width:680px){
+    .phone{
+        display:none
+    }
+    .cardClient{
+        width: 100%;
+    }
+    .infoClient{
+        width: 100%;
+    }
+} 
 @media (max-width:600px){ 
     .botonesBanner{
         flex-direction: column;
@@ -617,11 +633,15 @@ swiper-slide {
         margin: 0;
     }
     .seccionClientes{
-        height: 1050px;
+        height: 955px;
     }
     footer{
         padding-top: 180px;
     }
 }
-
+@media (max-width:400px){ 
+    .cardClient button, .cardClient2 button{
+        margin-top: 0;
+    }
+}
 
