@@ -1,7 +1,7 @@
 * { 
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suma posteriormente. */
+    box-sizing: border-box; 
 }
 body::-webkit-scrollbar{
     width: 9px;
