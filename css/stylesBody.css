@@ -37,6 +37,24 @@ h3{
     font-size: 20px!important;
 }
 /*---------- HEADER ----------*/
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 60px;
+    bottom: 140px;
+    z-index: 11000;
+    cursor: pointer;
+    animation: action 1s infinite alternate;
+    background-color: black;
+    color: white;
+    transition:.3s ease-in-out
+}
+.back-to-top:hover{
+    background-color: white;
+    color: #9b1c43;
+    transform: translateY(-15%);;
+}
+
 .navbar{
     background-color: transparent!important;
     color: #7d848e;
@@ -101,6 +119,13 @@ h3{
     font-weight: 400;
     color: #818792;
 }
+.botonesBanner button{
+    transition: .3s ease-in-out
+}
+.botonesBanner button:hover {
+    background-color: white;
+    color: blue;
+}
 .boton1Banner{
     border: #5c6572 solid 2px;
     background-color: rgba(39,51,69,255);
@@ -162,6 +187,14 @@ h3{
     align-items: center;
     justify-content: space-around;
     margin: 15px;
+    transition: .3s ease-in-out;
+}
+.servicio:hover{
+    box-shadow: 0px 0px 19px 0px rgba(140,140,140,1);
+}
+.servicio:hover i {
+    transform: rotate(360deg); /* Rotar el icono 360 grados */
+    transition: transform 0.5s ease; /* Agregar una transición suave */
 }
 .servicio i{
     background-color:#3871ff;
@@ -174,6 +207,7 @@ h3{
     font-size: 35px;
     color: white;
     padding: 20px;
+    transition: .3 ease;
 }
 .titulo{
     font-size: 25px;
@@ -193,6 +227,11 @@ h3{
     color: #808080;
     margin-right: 25px;
     font-size:20px;
+    transition: .3s ease-in-out;
+}
+.servicio button:hover{
+    background-color: #283345;
+    color: white;
 }
 .serviciosSwiper{
     border: black solid 3px;
@@ -265,6 +304,31 @@ swiper-slide {
     border: black solid 3px;
     width: 150px;
     text-align: center;
+    transition: .3s ease-in-out;
+}
+.iconosTecnologias .fa-html5:hover {
+    color: #e34c26;
+    transform: scale(1.05);
+}
+.iconosTecnologias .fa-css3-alt:hover{
+    color: blue;
+    transform: scale(1.05);
+}
+.iconosTecnologias .fa-node-js:hover{
+    color: #68a063;
+    transform: scale(1.05);
+}
+.iconosTecnologias .fa-sass:hover {
+    color: #cc6699;
+    transform: scale(1.05);
+}
+.iconosTecnologias .fa-angular:hover {
+    color: red;
+    transform: scale(1.05);
+}
+.iconosTecnologias .fa-python:hover {
+    color: goldenrod;
+    transform: scale(1.05);
 }
 
 /*---------- CLIENTES ----------*/
@@ -331,6 +395,11 @@ swiper-slide {
     margin-right: 25px;
     margin-top: 30px;
     font-size:17px;
+    transition: .3s ease-in-out;
+}
+.cardClient button:hover, .cardClient2 button:hover{
+    background-color: #283345;
+    color: white;
 }
 .cardClient2{
     background-color: #3871ff;
